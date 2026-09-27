@@ -1039,6 +1039,15 @@ body {
   display: inline-block;
 }
 
+.skill-logo-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .skill-icon {
   width: 18px;
   height: 18px;
