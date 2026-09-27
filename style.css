@@ -266,6 +266,23 @@ body {
   letter-spacing: -0.5px;
 }
 
+.nav-pfp {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 15%;
+  border: 2px solid var(--accent-blue);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+  transition: var(--transition);
+  display: block;
+}
+.nav-pfp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.6);
+  border-color: var(--accent-purple);
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -609,6 +626,51 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.about-photo-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+.about-photo-card:hover {
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.about-portrait-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: 50% 15%;
+  display: block;
+  transition: var(--transition);
+}
+.about-photo-card:hover .about-portrait-img {
+  transform: scale(1.02);
+}
+.about-photo-overlay {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: flex-start;
+}
+.status-pill-sm {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  background: rgba(10, 13, 20, 0.85);
+  backdrop-filter: blur(8px);
+  border-color: rgba(56, 189, 248, 0.4);
+  margin-bottom: 0;
+}
+[data-theme="light"] .status-pill-sm {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .info-card {
