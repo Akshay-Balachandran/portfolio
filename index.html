@@ -68,10 +68,11 @@
     <section id="hero" class="hero-section">
       <div class="container hero-container">
         <div class="hero-content">
-          <div class="status-pill">
+          <a href="#experience" class="status-pill status-pill-clickable" id="heroStatusPill" title="Click to view current Microsoft role details">
             <span class="pulse-dot"></span>
             <span>Validating Frontier AI Agents @ Microsoft Project</span>
-          </div>
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" class="pill-arrow"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+          </a>
 
           <h1 class="hero-title">
             Hi, I'm <span class="gradient-text">Akshay Balachandran</span>
@@ -121,16 +122,19 @@
         </div>
 
         <div class="hero-visual">
-          <div class="terminal-card">
+          <div class="terminal-card" id="terminalCard">
             <div class="terminal-header">
               <div class="terminal-dots">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
+                <button class="dot dot-red" id="termCloseBtn" title="Close / Reset Terminal" aria-label="Close terminal window"></button>
+                <button class="dot dot-yellow" id="termMinBtn" title="Minimize / Collapse Terminal" aria-label="Minimize terminal window"></button>
+                <button class="dot dot-green" id="termMaxBtn" title="Run Live Agent Diagnostic Test" aria-label="Run live test"></button>
               </div>
               <div class="terminal-title">akshay@copilot-agent-qa:~</div>
             </div>
-            <div class="terminal-body">
+            <div class="terminal-closed-msg" id="termClosedMsg">
+              <span>🖥️ Terminal session minimized. <strong>Click to restart</strong></span>
+            </div>
+            <div class="terminal-body" id="terminalBody">
               <div class="code-line"><span class="cmd-prompt">$</span> <span class="cmd-run">whoami</span></div>
               <div class="code-output highlight-gold">"Akshay Balachandran"</div>
               
@@ -155,6 +159,8 @@
                 <span class="badge-tag">✔ 8 Microsoft 365 Platforms</span><br>
                 <span class="badge-tag">✔ Test Coverage Boosted +20%</span>
               </div>
+              
+              <div id="termExtraOutput"></div>
             </div>
           </div>
         </div>
