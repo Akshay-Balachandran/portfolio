@@ -1013,12 +1013,48 @@ body {
   font-weight: 500;
   color: var(--text-main);
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
 }
 .skill-badges li:hover {
   border-color: var(--accent-blue);
   color: var(--accent-blue);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
 }
+
+.skill-badges li i {
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+.ai-purple { color: #c084fc; }
+.ai-cyan { color: #38bdf8; }
+.ai-blue { color: #60a5fa; }
+.ai-indigo { color: #818cf8; }
+.ai-gold { color: #fbbf24; }
+.ai-green { color: #34d399; }
+.dev-amber { color: #f59e0b; }
+.dev-blue { color: #38bdf8; }
+.tool-green { color: #10b981; }
+.tool-emerald { color: #059669; }
+.lead-amber { color: #f59e0b; }
+.lead-blue { color: #38bdf8; }
+.lead-red { color: #f87171; }
+.lead-green { color: #34d399; }
+.lead-purple { color: #a78bfa; }
+.lead-gold { color: #fbbf24; }
+.lead-cyan { color: #22d3ee; }
 
 /* --- Projects Section --- */
 .projects-grid {
