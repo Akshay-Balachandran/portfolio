@@ -122,19 +122,16 @@
         </div>
 
         <div class="hero-visual">
-          <div class="terminal-card" id="terminalCard">
+          <div class="terminal-card">
             <div class="terminal-header">
               <div class="terminal-dots">
-                <button class="dot dot-red" id="termCloseBtn" title="Close / Reset Terminal" aria-label="Close terminal window"></button>
-                <button class="dot dot-yellow" id="termMinBtn" title="Minimize / Collapse Terminal" aria-label="Minimize terminal window"></button>
-                <button class="dot dot-green" id="termMaxBtn" title="Run Live Agent Diagnostic Test" aria-label="Run live test"></button>
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
               </div>
               <div class="terminal-title">akshay@copilot-agent-qa:~</div>
             </div>
-            <div class="terminal-closed-msg" id="termClosedMsg">
-              <span>🖥️ Terminal session minimized. <strong>Click to restart</strong></span>
-            </div>
-            <div class="terminal-body" id="terminalBody">
+            <div class="terminal-body">
               <div class="code-line"><span class="cmd-prompt">$</span> <span class="cmd-run">whoami</span></div>
               <div class="code-output highlight-gold">"Akshay Balachandran"</div>
               
@@ -159,8 +156,6 @@
                 <span class="badge-tag">✔ 8 Microsoft 365 Platforms</span><br>
                 <span class="badge-tag">✔ Test Coverage Boosted +20%</span>
               </div>
-              
-              <div id="termExtraOutput"></div>
             </div>
           </div>
         </div>
