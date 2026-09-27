@@ -122,16 +122,16 @@
         </div>
 
         <div class="hero-visual">
-          <div class="terminal-card">
-            <div class="terminal-header">
+          <div class="terminal-card" id="terminalCard">
+            <div class="terminal-header" id="terminalHeader">
               <div class="terminal-dots">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
+                <button class="dot dot-red" id="termCloseBtn" title="Close Window" aria-label="Close terminal window"></button>
+                <button class="dot dot-yellow" id="termMinBtn" title="Minimize / Expand Window" aria-label="Minimize or expand terminal window"></button>
+                <button class="dot dot-green" id="termMaxBtn" title="Restore / Focus Window" aria-label="Restore window"></button>
               </div>
               <div class="terminal-title">akshay@copilot-agent-qa:~</div>
             </div>
-            <div class="terminal-body">
+            <div class="terminal-body" id="terminalBody">
               <div class="code-line"><span class="cmd-prompt">$</span> <span class="cmd-run">whoami</span></div>
               <div class="code-output highlight-gold">"Akshay Balachandran"</div>
               
@@ -158,6 +158,10 @@
               </div>
             </div>
           </div>
+          <button class="btn btn-secondary btn-sm reopen-terminal-btn" id="reopenTerminalBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            <span>Reopen Terminal</span>
+          </button>
         </div>
       </div>
     </section>

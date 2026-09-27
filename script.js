@@ -136,3 +136,63 @@ if (heroStatusPill) {
   });
 }
 
+// --- Terminal Window Actions (Close & Minimize) ---
+const terminalCard = document.getElementById('terminalCard');
+const terminalBody = document.getElementById('terminalBody');
+const termCloseBtn = document.getElementById('termCloseBtn');
+const termMinBtn = document.getElementById('termMinBtn');
+const termMaxBtn = document.getElementById('termMaxBtn');
+const reopenTerminalBtn = document.getElementById('reopenTerminalBtn');
+
+// 🔴 Close Window Action
+if (termCloseBtn && terminalCard && reopenTerminalBtn) {
+  termCloseBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    terminalCard.style.opacity = '0';
+    terminalCard.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      terminalCard.style.display = 'none';
+      reopenTerminalBtn.style.display = 'inline-flex';
+    }, 250);
+    showToast('Terminal closed. Click "Reopen Terminal" to restore.');
+  });
+}
+
+// Reopen Terminal Button Action
+if (reopenTerminalBtn && terminalCard) {
+  reopenTerminalBtn.addEventListener('click', () => {
+    reopenTerminalBtn.style.display = 'none';
+    terminalCard.style.display = 'block';
+    if (terminalBody) terminalBody.classList.remove('minimized');
+    setTimeout(() => {
+      terminalCard.style.opacity = '1';
+      terminalCard.style.transform = 'scale(1)';
+    }, 20);
+    showToast('Terminal window reopened!');
+  });
+}
+
+// 🟡 Minimize / Expand Body Action
+if (termMinBtn && terminalBody) {
+  termMinBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    terminalBody.classList.toggle('minimized');
+    const isMinimized = terminalBody.classList.contains('minimized');
+    showToast(isMinimized ? 'Terminal window minimized' : 'Terminal window expanded');
+  });
+}
+
+// 🟢 Restore / Focus Action
+if (termMaxBtn && terminalBody) {
+  termMaxBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (terminalBody.classList.contains('minimized')) {
+      terminalBody.classList.remove('minimized');
+      showToast('Terminal window restored');
+    } else {
+      showToast('Terminal window is active');
+    }
+  });
+}
+
+
